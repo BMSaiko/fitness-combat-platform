@@ -1,0 +1,17 @@
+{
+  "name": "@fitness-combat/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/app.js",
+  "types": "./dist/app.d.ts",
+  "scripts": {
+    "dev": "echo 'Mobile dev - run TypeScript watch' && tsc --watch",
+    "build": "tsc",
+    "test": "echo 'Mobile tests not configured' && exit 0",
+    "lint": "eslint src/**/*.ts --ext .ts",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
