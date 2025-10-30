@@ -1,17 +1,48 @@
-// Simple TypeScript test file - React Native will be added later
-export const appName = "Fitness Combat Platform Mobile";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+// Importação correta para tipos com verbatimModuleSyntax
+import type { User } from '../../../packages/shared/src/types';
 
-export interface AppConfig {
-  version: string;
-  isDevelopment: boolean;
-}
+const App: React.FC = () => {
+  const user: User = {
+    id: '1',
+    email: 'test@example.com',
+    name: 'Test User',
+    userType: 'member',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
 
-export const config: AppConfig = {
-  version: "0.1.0",
-  isDevelopment: true
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Fitness Combat Platform</Text>
+      <Text style={styles.subtitle}>Mobile App</Text>
+      <Text style={styles.userInfo}>User: {user.name}</Text>
+      <Text style={styles.userInfo}>Email: {user.email}</Text>
+    </View>
+  );
 };
 
-// Utility function for future use
-export const initializeApp = (): string => {
-  return `${appName} v${config.version} initialized`;
-};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 18,
+    marginBottom: 16,
+  },
+  userInfo: {
+    fontSize: 14,
+    marginBottom: 4,
+  },
+});
+
+export default App;

@@ -28,6 +28,12 @@ jobs:
       - name: Build
         run: npm run build
         continue-on-error: true
+
+      - name: Type Check All Packages
+        run: |
+          echo "🔍 Running TypeScript type checking..."
+          npm run type-check
+        continue-on-error: false
       
       - name: Verify Deploy Scripts
         run: |

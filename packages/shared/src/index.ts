@@ -1,20 +1,9 @@
-// Shared types and utilities
-
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  userType: 'member' | 'trainer' | 'admin' | 'nutritionist';
-}
-
-export interface Exercise {
-  id: string;
-  name: string;
-  category: string;
-  description?: string;
-}
+// Export all types
+export * from './types';
 
 // Utility functions
-export const formatDate = (date: Date): string => {
-  return date.toISOString().split('T')[0];
-};
+export { formatDate, formatDateTime, isToday } from '../src/utils/date';
+export { validateEmail, validatePassword, validatePhone } from '../src/utils/validation';
+
+// Constants
+export { APP_CONSTANTS, EXERCISE_CATEGORIES, NUTRIENT_TYPES } from '../src/constants';
