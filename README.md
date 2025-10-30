@@ -29,6 +29,8 @@ Fitness & Combat Sports Platform is a comprehensive white-label solution that co
 - **📱 Mobile First** - React Native app for iOS & Android
 
 ## 🏗️ Architecture
+
+```ascii
 ┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
 │ Mobile App │────│ API Gateway │────│ Microservices │
 │ (React Native) │ │ (Node.js) │ │ Architecture │
@@ -37,31 +39,39 @@ Fitness & Combat Sports Platform is a comprehensive white-label solution that co
 │ Web Admin │─────────────┘ │ Databases │
 │ (Next.js) │ │ (PostgreSQL + │
 └─────────────────┘ │ MongoDB) │
-└─────────────────┘
+                    └─────────────────┘
+```
 
-text
 
 ## 🛠️ Tech Stack
 
+
 ### Frontend
+
 - **Mobile:** React Native with TypeScript
 - **Web Admin:** Next.js 14 with App Router
 - **UI Libraries:** NativeBase, Shadcn/ui
 - **State Management:** Redux Toolkit, React Query
 
+
 ### Backend
+
 - **Runtime:** Node.js with TypeScript
 - **Framework:** FastAPI (Python) for microservices
 - **API:** GraphQL with REST fallback
 - **Authentication:** JWT with refresh tokens
 
+
 ### Database
+
 - **Primary:** PostgreSQL for relational data
 - **Nutrition:** MongoDB for flexible food schema
 - **Cache:** Redis for performance
 - **Search:** Elasticsearch for advanced queries
 
+
 ### Infrastructure
+
 - **Containerization:** Docker & Docker Compose
 - **CI/CD:** GitHub Actions
 - **Monitoring:** Prometheus & Grafana
@@ -70,46 +80,62 @@ text
 ## 🚦 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - PostgreSQL 14+
 - MongoDB 6+
 - Docker (optional)
 
+
 ### Installation
 
 1. **Clone the repository**
+
+    ```bash
+    git clone https://github.com/your-username/fitness-combat-platform.git
+    cd fitness-combat-platform
+    ```
+
+1. **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+1. **Setup environment variables**
+
+    ```bash
+    cp .env.example .env
+    # Edit .env with your database credentials
+    ```
+
+1. **Start development environment**
+
+    ```bash
+    # Start all services
+    npm run dev
+
+    # Or start individually
+    npm run dev:mobile
+    npm run dev:web
+    npm run dev:api
+    ```
+
+
+## Development Scripts
+
 ```bash
-git clone https://github.com/your-username/fitness-combat-platform.git
-cd fitness-combat-platform
-Install dependencies
-
-bash
-npm install
-Setup environment variables
-
-bash
-cp .env.example .env
-# Edit .env with your database credentials
-Start development environment
-
-bash
-# Start all services
-npm run dev
-
-# Or start individually
-npm run dev:mobile
-npm run dev:web
-npm run dev:api
-Development Scripts
-bash
 npm run dev          # Start all services
 npm run build        # Build all packages
 npm run test         # Run all tests
 npm run test:watch   # Run tests in watch mode
 npm run lint         # Run linter
 npm run type-check   # Run TypeScript compiler
-📁 Project Structure
-text
+```
+
+## 📁 Project Structure
+
+```tree
 fitness-combat-platform/
 ├── 📱 apps/
 │   ├── mobile/                 # React Native App
@@ -125,47 +151,50 @@ fitness-combat-platform/
 ├── 📚 docs/                  # Documentation
 ├── 🛠️ scripts/              # Development Scripts
 └── 🔧 infrastructure/        # DevOps Configs
-🤝 Contributing
+```
+
+
+## 🤝 Contributing
+
 We love contributions! Please see our Contributing Guide for details.
 
-Development Workflow
-Fork the repository
+### Development Workflow
 
-Create a feature branch (git checkout -b feature/amazing-feature)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Commit your changes (git commit -m 'Add some amazing feature')
 
-Push to the branch (git push origin feature/amazing-feature)
+### Code Standards
 
-Open a Pull Request
+- Use TypeScript for all new code
+- Follow the existing code style
+- Write tests for new features
+- Update documentation as needed
 
-Code Standards
-Use TypeScript for all new code
 
-Follow the existing code style
+## 📊 Project Status
 
-Write tests for new features
+- **Current Phase:** MVP Development
+- **Next Milestone:** Authentication & Exercise Database
+- **Target Release:** Q2 2024
 
-Update documentation as needed
 
-📊 Project Status
-Current Phase: MVP Development
-Next Milestone: Authentication & Exercise Database
-Target Release: Q2 2024
+## 📄 License
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-🙏 Acknowledgments
-Exercise data from various open sources
 
-Nutrition database integration with Open Food Facts
+## 🙏 Acknowledgments
 
-Icons from Heroicons and Lucide React
+- Exercise data from various open sources
+- Nutrition database integration with Open Food Facts
+- Icons from Heroicons and Lucide React
 
-<div align="center">
+---
+
 Built with ❤️ for the fitness and martial arts community
 
-Report Bug · Request Feature
-
-</div> ```
+[Report Bug](../../issues) · [Request Feature](../../issues)
