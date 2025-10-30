@@ -1,0 +1,16 @@
+{
+  "name": "@fitness-combat/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Mobile dev not configured yet'",
+    "build": "echo 'Mobile build not configured yet'",
+    "test": "jest",
+    "lint": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/react": "^18.2.0"
+  }
+}
