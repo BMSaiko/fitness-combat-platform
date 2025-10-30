@@ -18,7 +18,7 @@
     "dev:web": "turbo run dev --filter=./apps/web-admin",
     "dev:api": "turbo run dev --filter=./packages/api-gateway"
 
-    // Adicionar scripts de deploy
+
     "deploy:staging": "echo \"Staging deployment not configured yet\" && exit 0",
     "deploy:production": "echo \"Production deployment not configured yet\" && exit 0",
     "deploy:all": "npm run build && npm run deploy:staging"
