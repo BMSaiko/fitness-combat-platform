@@ -166,7 +166,7 @@ seeds/
 
 # Package lock files (we use npm)
 yarn.lock
-package-lock.json
+
 
 # Build artifacts for specific platforms
 apps/mobile/android/app/build/
