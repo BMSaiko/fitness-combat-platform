@@ -265,3 +265,6 @@ storybook-static/
 # Production
 *.tar.gz
 *.zip
+
+# Turbo (task/cache directory)
+.turbo/
