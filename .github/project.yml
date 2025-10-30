@@ -1,1 +1,17 @@
+# .github/project.yml
+name: "Fitness Combat Platform"
+description: "Development roadmap for fitness and combat sports app"
+columns:
+  - "Backlog"
+  - "Ready for Development"
+  - "In Progress"
+  - "Code Review"
+  - "QA Testing"
+  - "Done"
 
+automation:
+  - when: issues.opened
+    then: add_to_project(project: "Fitness Combat Platform", column: "Backlog")
+  
+  - when: pull_request.opened
+    then: add_to_project(project: "Fitness Combat Platform", column: "Code Review")
