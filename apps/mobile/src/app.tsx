@@ -1,11 +1,17 @@
-// Simple test component without React Native for now
-import React from 'react';
+// Simple TypeScript test file - React Native will be added later
+export const appName = "Fitness Combat Platform Mobile";
 
-const App: React.FC = () => {
-  return React.createElement('div', null, 
-    React.createElement('h1', null, 'Fitness Combat Platform Mobile App'),
-    React.createElement('p', null, 'Coming Soon...')
-  );
+export interface AppConfig {
+  version: string;
+  isDevelopment: boolean;
+}
+
+export const config: AppConfig = {
+  version: "0.1.0",
+  isDevelopment: true
 };
 
-export default App;
+// Utility function for future use
+export const initializeApp = (): string => {
+  return `${appName} v${config.version} initialized`;
+};

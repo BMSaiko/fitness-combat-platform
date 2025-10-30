@@ -1,9 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-native",
-    "lib": ["ES2022", "DOM"],
-    "moduleResolution": "node"
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["ES2022"],
+    "types": []  // Remove 'node' types for mobile
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "build"]
