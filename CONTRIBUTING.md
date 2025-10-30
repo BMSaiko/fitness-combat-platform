@@ -51,15 +51,17 @@ Follow conventional commits format:
 Run the test suite:
 ```bash
 npm test
+```
+
 Write tests for new features:
 
-Unit tests with Jest
+- Unit tests with Jest
+- Integration tests for APIs
+- E2E tests for critical user flows
 
-Integration tests for APIs
 
-E2E tests for critical user flows
+## Reporting Bugs
 
-Reporting Bugs
 Use GitHub Issues and include:
 
 Description of the bug
