@@ -1,1 +1,21 @@
+name: CD Pipeline
+on:
+  push:
+    branches: [main]
 
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm run deploy:staging
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: production
+    if: github.ref == 'refs/heads/main'
+    needs: deploy-staging
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm run deploy:production
