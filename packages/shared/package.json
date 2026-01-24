@@ -1,0 +1,17 @@
+{
+  "name": "@fitness-combat/shared",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo 'Tests not configured' && exit 0",
+    "lint": "eslint src/**/*.ts --ext .ts",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.24",
+    "typescript": "^5.3.3"
+  }
+}
