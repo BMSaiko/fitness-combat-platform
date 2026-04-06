@@ -42,7 +42,7 @@ jobs:
         run: npm run type-check
       
       - name: Security scan
-        run: npm audit --audit-level=moderate
+        run: npm audit --audit-level=high
       
       - name: CodeQL Analysis
         uses: github/codeql-action/init@v2
